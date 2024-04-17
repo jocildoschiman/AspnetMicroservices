@@ -1,3 +1,4 @@
+#encoding: utf-8
 version: '3.4'
 
 services:
@@ -8,7 +9,6 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
-
   catalog.api:
     container_name: catalog.api
     environment:
