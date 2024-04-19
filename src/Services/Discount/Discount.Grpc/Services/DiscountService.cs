@@ -19,6 +19,13 @@ namespace Discount.Grpc.Services
             _logger = logger;
             _mapper = mapper;
         }
+        /// <summary>
+        /// Retorna os dados do desconto com base no ID do produto passado como parámetro
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        /// <exception cref="RpcException"></exception>
         public override async Task<CouponModel> GetDiscount(GetDiscountRequest request, ServerCallContext context)
         {
             var coupon = await _repository.GetDiscount(request.ProductName);
