@@ -13,7 +13,16 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{3F2CD53D-4E28-42A5-8DF8-97039D280B5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{67928142-2F18-41F4-9EF7-E34B794564B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.API", "Services\Basket\Basket.API\Basket.API.csproj", "{67928142-2F18-41F4-9EF7-E34B794564B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{AA9D1FD3-BBD6-41DE-B443-60F050015659}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.API", "Services\Discount\Discount.API\Discount.API.csproj", "{F86644EA-EAF1-40EE-8C23-6F5C0F2CD739}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6931AE90-9E82-4C09-B008-942EE4935F31}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +42,10 @@ Global
 		{67928142-2F18-41F4-9EF7-E34B794564B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67928142-2F18-41F4-9EF7-E34B794564B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67928142-2F18-41F4-9EF7-E34B794564B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F86644EA-EAF1-40EE-8C23-6F5C0F2CD739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F86644EA-EAF1-40EE-8C23-6F5C0F2CD739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F86644EA-EAF1-40EE-8C23-6F5C0F2CD739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F86644EA-EAF1-40EE-8C23-6F5C0F2CD739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +55,8 @@ Global
 		{2AB479F7-8697-46FC-AC78-444568DAD787} = {947EE1FE-9673-4256-8E3E-74D07DBDA155}
 		{3F2CD53D-4E28-42A5-8DF8-97039D280B5C} = {01F06ADE-DEDB-4D15-B7BB-117DB4775704}
 		{67928142-2F18-41F4-9EF7-E34B794564B0} = {3F2CD53D-4E28-42A5-8DF8-97039D280B5C}
+		{AA9D1FD3-BBD6-41DE-B443-60F050015659} = {01F06ADE-DEDB-4D15-B7BB-117DB4775704}
+		{F86644EA-EAF1-40EE-8C23-6F5C0F2CD739} = {AA9D1FD3-BBD6-41DE-B443-60F050015659}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E74485A-C389-4E83-8F8B-B44CB50498BE}
