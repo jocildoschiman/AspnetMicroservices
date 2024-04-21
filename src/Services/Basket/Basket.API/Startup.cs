@@ -8,6 +8,9 @@ using Microsoft.OpenApi.Models;
 using System.IO;
 using System.Reflection;
 using System;
+using Discount.Grpc.Protos;
+using System.Security.Policy;
+using Basket.API.GrpcServices;
 
 namespace Basket.API
 {
@@ -30,6 +33,11 @@ namespace Basket.API
             });
 
             services.AddScoped<IBasketRepository, BasketRepository>();
+
+            services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>
+                (options => options.Address = new Uri(Configuration["GrpcSettings:DiscountUrl"]));
+
+            services.AddScoped<DiscountGrpcService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

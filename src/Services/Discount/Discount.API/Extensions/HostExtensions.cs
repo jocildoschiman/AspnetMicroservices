@@ -29,7 +29,7 @@ namespace Discount.API.Extensions
                 try
                 {
                     logger.LogInformation("Migrating PostgreSQL database");
-                    using(var conn = CreateConnection(configuration))
+                    using (var conn = CreateConnection(configuration))
                     {
                         //Exclui a tabela se existir:
                         var sql = "DROP TABLE IF EXISTS Coupon";
@@ -39,14 +39,13 @@ namespace Discount.API.Extensions
                                     Description TEXT, Amount Double Precision);";
                         conn.Execute(sql);
                         //Insere alguns dados na tabela criada:
-                        sql = "INSERT INTO Coupon(ProductName, Description, Amount) VALUES('iPhone X','iPhone X Discount', 35000);";
+                        sql = "INSERT INTO Coupon(ProductName, Description, Amount) VALUES('iPhone X','iPhone X Discount', 150);";
                         conn.Execute(sql);
-                        sql = "INSERT INTO Coupon(ProductName, Description, Amount) VALUES('Samsung Galaxy 23Ultra','Samsung Galaxy 23Ultra Discount', 99000);";
+                        sql = "INSERT INTO Coupon(ProductName, Description, Amount) VALUES('Samsung A10','Samsung A10 Discount', 125);";
                         conn.Execute(sql);
 
                         logger.LogInformation("Migrated PostgreeSQL database");
                     }
-
                 }
                 catch (NpgsqlException ex)
                 {

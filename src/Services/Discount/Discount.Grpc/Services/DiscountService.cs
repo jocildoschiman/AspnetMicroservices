@@ -37,6 +37,12 @@ namespace Discount.Grpc.Services
             var couponModel = _mapper.Map<CouponModel>(coupon);
             return couponModel;
         }
+        /// <summary>
+        /// Cria o desconto e salva-o no banco de dados
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override async Task<CouponModel> CreateDiscount(CreateDiscountRequest request, ServerCallContext context)
         {
             var coupon = _mapper.Map<Coupon>(request.Coupon);
@@ -44,6 +50,12 @@ namespace Discount.Grpc.Services
             _logger.LogInformation("Discount is successfully created. ProductName: {ProductName}", coupon.ProductName);
             return _mapper.Map<CouponModel>(coupon);
         }
+        /// <summary>
+        /// Actualiza o desconto existente no banco de dados com base na requisição
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override async Task<CouponModel> UpdateDiscount(UpdateDiscountRequest request, ServerCallContext context)
         {
             var coupon = _mapper.Map<Coupon>(request.Coupon);
@@ -51,6 +63,12 @@ namespace Discount.Grpc.Services
             _logger.LogInformation("Discount is successfully updated. ProductName: {ProductName}", coupon.ProductName);
             return _mapper.Map<CouponModel>(coupon);
         }
+        /// <summary>
+        /// Exclui o desconto do banco de dados com base na requisição passada
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="context"></param>
+        /// <returns></returns>
         public override async Task<DeleteDiscountResponse> DeleteDiscount(DeleteDiscountRequest request, ServerCallContext context)
         {
             var deleted = await _repository.DeleteDiscount(request.ProductName);
