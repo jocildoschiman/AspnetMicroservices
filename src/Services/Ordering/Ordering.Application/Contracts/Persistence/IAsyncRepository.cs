@@ -60,6 +60,12 @@ namespace Ordering.Application.Contracts.Persistence
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
-        Task<T> UpdateAsync(T entity);  
+        Task<T> UpdateAsync(T entity); 
+        /// <summary>
+        /// Exclui um registo do banco de dados
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        Task<T> DeleteAsync(T entity);
     }
 }
